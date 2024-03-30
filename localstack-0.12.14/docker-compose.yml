@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+  localstack:
+    image: localstack/localstack:0.12.14
+    container_name: localstack_s3
+    network_mode: bridge
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+      - SERVICES=lambda,s3
+      - EDGE_PORT=4566
+      - PERSISTENCE=1
+      # - DEBUG=1
+      # - LS_LOG=trace
+      - DATA_DIR=/tmp/localstack
+      # - AWS_DEFAULT_REGION=ap-southeast-3
+    ports:
+      - "4566:4566"
+    volumes:
+      - ./localstack/localstack_data:/tmp/localstack
+      - ./localstack/localstack_libraries:/usr/lib/localstack    # static third-party packages installed into the container images
+      - ./localstack/localstack_root:/var/lib/localstack         # the LocalStack volume directory root
+      - "/var/run/docker.sock:/var/run/docker.sock"
