@@ -178,6 +178,8 @@ File structure of the mounting directory.
 
 ### &#x1F530; Conclusion.
 
+The buckets and object data still exist after the container is restarted.
+
 &nbsp;
 
 &nbsp;

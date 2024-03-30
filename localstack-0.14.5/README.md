@@ -115,7 +115,7 @@ File structure of the mounting directory.
 
         # list buckets.
         ❯ awslocal s3 ls
-            2024-03-29 16:28:43 testbucket
+            2024-03-30 01:44:01 testbucket
     </pre>
 
 - &#x2705; Command used outside the container.
@@ -129,7 +129,7 @@ File structure of the mounting directory.
 
     # list objects
     ❯ aws --endpoint-url=http://localhost:4566 s3 ls s3://testbucket/ 
-        2024-03-30 03:16:20      25600 tank.png
+        2024-03-30 08:44:45      25600 tank.png
     </pre>
 
 &nbsp;
@@ -144,7 +144,7 @@ File structure of the mounting directory.
 
     # list of files in the bucket
     ❯ aws --endpoint-url=http://localhost:4566 s3 ls s3://testbucket/
-        2024-03-30 03:22:49      25600 tank.png
+        2024-03-30 08:45:18      25600 tank.png
 
     # remove bucket
     ❯ aws --endpoint-url=http://localhost:4566 s3 rb s3://testbucket --force
@@ -158,6 +158,8 @@ File structure of the mounting directory.
 &nbsp;
 
 ### &#x1F530; Conclusion.
+
+The buckets and object data still exist after the container is restarted.
 
 &nbsp;
 
