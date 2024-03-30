@@ -78,7 +78,22 @@ Build.
 File structure of the mounting directory.
 <pre>
     ❯ tree -L 5 -a -I 'README.md|.DS_Store' ./localstack
- 
+        ├── localstack_config
+        ├── localstack_data
+        ├── localstack_libraries
+        └── localstack_root
+            ├── cache
+            │   ├── machine.json
+            │   ├── server.test.pem
+            │   ├── server.test.pem.crt
+            │   ├── server.test.pem.key
+            │   └── service-catalog-2_0_0-1_29_97.pickle
+            ├── lib
+            ├── logs
+            ├── state
+            └── tmp
+
+    9 directories, 5 files
 </pre>
 
 &nbsp;
