@@ -301,8 +301,9 @@ The buckets and object data still exist after the container is restarted.
 &nbsp;
 
 ### Notes:
-Reference:<br /> 
-<pre>https://github.com/rayhaanbhikha/localstack-s3-ui</pre>
+
+- Reference:<br /> 
+    <pre>https://github.com/rayhaanbhikha/localstack-s3-ui</pre>
 
 &nbsp;
 
