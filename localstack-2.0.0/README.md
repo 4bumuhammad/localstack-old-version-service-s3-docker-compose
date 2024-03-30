@@ -53,6 +53,24 @@ Build.
 <pre>
     ❯ docker-compose up
 
+        +] Running 1/1
+        ⠿ Container localstack_s3  Created                                                                                                                                                0.6s
+        Attaching to localstack_s3
+        localstack_s3  | SERVICES variable is ignored if EAGER_SERVICE_LOADING=0.
+        localstack_s3  | 
+        localstack_s3  | LocalStack version: 2.0.0
+        localstack_s3  | LocalStack Docker container id: fb654c4bfa33
+        localstack_s3  | LocalStack build date: 2023-03-30
+        localstack_s3  | LocalStack build git hash: 7d80ee7f
+        localstack_s3  | 
+        localstack_s3  | 2024-03-30T02:55:23.840  WARN --- [  MainThread] localstack.deprecations    : DATA_DIR is deprecated (since 1.0.0) and will be removed in upcoming releases of LocalStack! Please use PERSISTENCE instead. The state will be stored in your LocalStack volume in the state/ directory.
+        localstack_s3  | 2024-03-30T02:55:23.840  WARN --- [  MainThread] localstack.deprecations    : EDGE_PORT is deprecated (since 2.0.0) and will be removed in upcoming releases of LocalStack! This configuration will be migrated to GATEWAY_LISTEN
+        localstack_s3  | 2024-03-30T02:55:24.501  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+        localstack_s3  | 2024-03-30T02:55:24.501  WARN --- [-functhread3] hypercorn.error            : ASGI Framework Lifespan error, continuing without Lifespan support
+        localstack_s3  | 2024-03-30T02:55:24.507  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+        localstack_s3  | 2024-03-30T02:55:24.507  INFO --- [-functhread3] hypercorn.error            : Running on https://0.0.0.0:4566 (CTRL + C to quit)
+        localstack_s3  | 2024-03-30T02:55:24.536  INFO --- [  MainThread] localstack.utils.bootstrap : Execution of "start_runtime_components" took 605.29ms
+        localstack_s3  | Ready.
 </pre>
 
 &nbsp;
