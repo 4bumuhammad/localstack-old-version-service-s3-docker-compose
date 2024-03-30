@@ -190,6 +190,79 @@ Request sample.
         --bucket BUCKET \
         --endpoint https://oos.eu-west-2.outscale.com
 </pre>
+<pre>
+    ❯ aws s3api create-bucket --bucket test-bucket-001-b --endpoint http://localhost:4566
+        {
+            "Location": "/test-bucket-001-b"
+        }    
+</pre>
+
+&nbsp;
+
+Request sample.
+<pre>
+    ❯ aws s3api list-buckets \
+        --profile YOUR_PROFILE \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
+<pre>
+    ❯ aws s3api list-buckets --endpoint http://localhost:4566
+        {
+            "Buckets": [
+                {
+                    "Name": "test-bucket-001-b",
+                    "CreationDate": "2024-03-30T03:40:54+00:00"
+                }
+            ],
+            "Owner": {
+                "DisplayName": "webfile",
+                "ID": "bcaf1ffd86f41161ca5fb16fd081034f"
+            }
+        }    
+</pre>
+
+&nbsp;
+
+Request sample.
+<pre>
+    ❯ aws s3api put-object \
+        --profile YOUR_PROFILE \
+        --bucket BUCKET \
+        --key OBJECT \
+        --body usr/bin/YOUR_OBJECT \
+        --acl private \
+        --content-length 42 \
+        --grant-full-control "id=USER_ID, id=USER_ID" \
+        --grant-read "id=USER_ID, id=USER_ID" \
+        --grant-read-acp "id=USER_ID, id=USER_ID" \
+        --grant-write-acp "id=USER_ID, id=USER_ID" \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
+<pre>
+    ❯ aws s3api put-object --bucket test-bucket-001-b --key tank.png --body ./tank.png --endpoint http://localhost:4566
+        {
+            "ETag": "\"ecdcc986fca929f13c8d36cf804d1e1c\""
+        }    
+</pre>
+
+&nbsp;
+
+Request sample.
+<pre>
+    ❯ aws s3api list-objects-v2 \
+        --profile YOUR_PROFILE \
+        --bucket BUCKET \
+        --prefix "bank-data/2023/" \
+        --delimiter "/" \
+        --encoding-type url \
+        --fetch-owner \
+        --start-after NOT_SPECIFIED \
+        --page-size 100 \
+        --max-items 500 \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
+<pre>
+</pre>
 
 
 &nbsp;
