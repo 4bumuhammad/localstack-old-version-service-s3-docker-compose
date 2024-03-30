@@ -316,7 +316,7 @@ Applying a CORS Configuration to a Bucket Using AWS CLI
                 ]
             }
         ]
-<pre>
+</pre>
 
 &nbsp;
 
