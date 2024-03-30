@@ -175,6 +175,31 @@ File structure of the mounting directory.
 
 &nbsp;
 
+---
+
+&nbsp;
+
+&nbsp;
+
+### &#x1F530; Testing with experimental stages (AWS CLI s3api ).
+
+Request sample.
+<pre>
+    ❯ aws s3api create-bucket \
+        --profile YOUR_PROFILE \
+        --bucket BUCKET \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 
 ### &#x1F530; Conclusion.
 
