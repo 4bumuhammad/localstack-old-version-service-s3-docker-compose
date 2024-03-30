@@ -280,6 +280,15 @@ Request sample.
         }    
 </pre>
 
+&nbsp;
+
+Request sample.
+<pre>
+    ❯ aws s3api get-bucket-cors \
+        --profile YOUR_PROFILE \
+        --bucket BUCKET \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
 
 &nbsp;
 
