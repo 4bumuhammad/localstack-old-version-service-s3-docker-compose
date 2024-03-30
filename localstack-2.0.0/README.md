@@ -113,7 +113,7 @@ File structure of the mounting directory.
 
         # list buckets.
         ❯ awslocal s3 ls
-            2024-03-30 01:44:01 testbucket
+            2024-03-30 03:06:58 testbucket
     </pre>
 
 - &#x2705; Command used outside the container.
@@ -127,7 +127,7 @@ File structure of the mounting directory.
 
     # list objects
     ❯ aws --endpoint-url=http://localhost:4566 s3 ls s3://testbucket/ 
-        2024-03-30 08:44:45      25600 tank.png
+        2024-03-30 10:07:47      25600 tank.png
     </pre>
 
 &nbsp;
@@ -142,12 +142,7 @@ File structure of the mounting directory.
 
     # list of files in the bucket
     ❯ aws --endpoint-url=http://localhost:4566 s3 ls s3://testbucket/
-        2024-03-30 08:45:18      25600 tank.png
-
-    # remove bucket
-    ❯ aws --endpoint-url=http://localhost:4566 s3 rb s3://testbucket --force
-
-        remove_bucket: testbucket
+        An error occurred (NoSuchBucket) when calling the ListObjectsV2 operation: The specified bucket does not exist
 
 </pre>
 
@@ -157,7 +152,7 @@ File structure of the mounting directory.
 
 ### &#x1F530; Conclusion.
 
-The buckets and object data still exist after the container is restarted.
+The bucket and object data are reset after the container is restarted.
 
 &nbsp;
 
