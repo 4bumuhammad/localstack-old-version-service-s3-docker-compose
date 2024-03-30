@@ -289,6 +289,31 @@ Request sample.
         --bucket BUCKET \
         --endpoint https://oos.eu-west-2.outscale.com
 </pre>
+<pre>
+    ❯ aws s3api get-bucket-cors --bucket test-bucket-001-b --endpoint http://localhost:4566
+        An error occurred (NoSuchCORSConfiguration) when calling the GetBucketCors operation: The CORS configuration does not exist
+</pre>
+Applying a CORS Configuration to a Bucket Using AWS CLI
+<pre>
+    ❯ touch my_cors-config.json
+
+    ❯ vim my_cors-config.json
+        . . .
+        [
+            {
+                "AllowedHeaders": [
+                    "*"
+                ],
+                "AllowedMethods": [
+                    "HEAD",
+                    "GET"
+                ],
+                "AllowedOrigins": [
+                    "*"
+                ]
+            }
+        ]
+<pre>
 
 &nbsp;
 
