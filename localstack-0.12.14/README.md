@@ -262,6 +262,22 @@ Request sample.
         --endpoint https://oos.eu-west-2.outscale.com
 </pre>
 <pre>
+    ❯ aws s3api list-objects --bucket test-bucket-001-b --endpoint http://localhost:4566
+        {
+            "Contents": [
+                {
+                    "Key": "tank.png",
+                    "LastModified": "2024-03-30T03:55:20+00:00",
+                    "ETag": "\"ecdcc986fca929f13c8d36cf804d1e1c\"",
+                    "Size": 25600,
+                    "StorageClass": "STANDARD",
+                    "Owner": {
+                        "DisplayName": "webfile",
+                        "ID": "75aa57f09aa0c8caeab4f8c24e99d10f8e7faeebf76c078efc7c6caea54ba06a"
+                    }
+                }
+            ]
+        }    
 </pre>
 
 
