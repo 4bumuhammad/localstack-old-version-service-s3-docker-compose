@@ -302,20 +302,16 @@ Applying a CORS Configuration to a Bucket Using AWS CLI
 
     ❯ vim my_cors-config.json
         . . .
-        [
+        {
+            "CORSRules": [
             {
-                "AllowedHeaders": [
-                    "*"
-                ],
-                "AllowedMethods": [
-                    "HEAD",
-                    "GET"
-                ],
-                "AllowedOrigins": [
-                    "*"
-                ]
+                "AllowedHeaders": ["Authorization"],
+                "AllowedMethods": ["GET"],
+                "AllowedOrigins": ["http://localhost:4566"],
+                "MaxAgeSeconds": 3000
             }
-        ]
+            ]
+        }
 </pre>
 
 &nbsp;
@@ -327,6 +323,30 @@ To apply a CORS configuration to a bucket, use the put-bucket-cors command follo
         --bucket BUCKET \
         --cors-configuration file://MY_CORS_CONFIG.json \
         --endpoint https://oos.eu-west-2.outscale.com
+</pre>
+<pre>
+    ❯ aws s3api put-bucket-cors --bucket test-bucket-001-b \
+            --cors-configuration file:////Users/powercommerce/Documents/test/from-github-all/localstack-old-version-service-s3-docker-compose/localstack-0.12.14/my_cors-config.json \
+            --endpoint http://localhost:4566
+</pre>
+<pre>
+    ❯ aws s3api get-bucket-cors --bucket test-bucket-001-b --endpoint http://localhost:4566
+        {
+            "CORSRules": [
+                {
+                    "AllowedHeaders": [
+                        "Authorization"
+                    ],
+                    "AllowedMethods": [
+                        "GET"
+                    ],
+                    "AllowedOrigins": [
+                        "http://localhost:4566"
+                    ],
+                    "MaxAgeSeconds": 3000
+                }
+            ]
+        }    
 </pre>
 
 &nbsp;

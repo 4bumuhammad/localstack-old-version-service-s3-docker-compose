@@ -1,16 +1,10 @@
-[
-    {
-        "AllowedHeaders": [
-            "*"
-        ],
-        "AllowedMethods": [
-            "HEAD",
-            "GET"
-        ],
-        "AllowedOrigins": [
-            "*"
-        ]
-    }
-]
-
-
+{
+    "CORSRules": [
+      {
+        "AllowedHeaders": ["Authorization"],
+        "AllowedMethods": ["GET"],
+        "AllowedOrigins": ["http://localhost:4566"],
+        "MaxAgeSeconds": 3000
+      }
+    ]
+}
