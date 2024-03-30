@@ -293,6 +293,9 @@ Request sample.
     ❯ aws s3api get-bucket-cors --bucket test-bucket-001-b --endpoint http://localhost:4566
         An error occurred (NoSuchCORSConfiguration) when calling the GetBucketCors operation: The CORS configuration does not exist
 </pre>
+
+&nbsp;
+
 Applying a CORS Configuration to a Bucket Using AWS CLI
 <pre>
     ❯ touch my_cors-config.json
@@ -314,6 +317,17 @@ Applying a CORS Configuration to a Bucket Using AWS CLI
             }
         ]
 <pre>
+
+&nbsp;
+
+To apply a CORS configuration to a bucket, use the put-bucket-cors command following this syntax:
+<pre>
+    ❯ aws s3api put-bucket-cors \
+        --profile YOUR_PROFILE \
+        --bucket BUCKET \
+        --cors-configuration file://MY_CORS_CONFIG.json \
+        --endpoint https://oos.eu-west-2.outscale.com
+</pre>
 
 &nbsp;
 
