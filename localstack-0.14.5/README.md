@@ -123,6 +123,12 @@ File structure of the mounting directory.
 
 &nbsp;
 
+### &#x1F530; Conclusion.
+
+&nbsp;
+
+&nbsp;
+
 ---
 
 &nbsp;
