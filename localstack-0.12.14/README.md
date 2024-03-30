@@ -15,7 +15,7 @@ LocalStack adalah sebuah alat pengembangan perangkat lunak open-source yang meny
 
 &nbsp;
 
-### &#x1F530; Start Deployment in docker compose without persistence.
+### &#x1F530; Start Deployment in docker compose.
 
 &nbsp;
 
