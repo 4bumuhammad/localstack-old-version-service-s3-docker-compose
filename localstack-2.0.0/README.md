@@ -1,4 +1,4 @@
-# Localstack 0.14.5
+# Localstack 2.0.0
 
 
 **Definisi localstack.** <br />
@@ -7,8 +7,8 @@ LocalStack adalah sebuah alat pengembangan perangkat lunak open-source yang meny
 &nbsp;
 
 <div align="center">
-    <img src="./gambar-petunjuk/ss_localstack_0.14.5_dockerhub.png" alt="ss_localstack_0.14.5_dockerhub" style="display: block; margin: 0 auto;">
-    <p align="center">URL : https://hub.docker.com/layers/localstack/localstack/0.14.5/images/sha256-dd3710167293d1a908788c66ceff383d8226f2efa9404f27bdff9926db1cd194?context=explore</p>
+    <img src="./gambar-petunjuk/ss_localstack_2.0.0_dockerhub.png" alt="ss_localstack_2.0.0_dockerhub" style="display: block; margin: 0 auto;">
+    <p align="center">URL : https://hub.docker.com/layers/localstack/localstack/2.0.0/images/sha256-2d0861a7fd281bb4f8a8404d8249ab4aed278c5ac8bdc55f8c246399e4bffcb8?context=explore</p>
 </div> 
 
 &nbsp;
@@ -26,7 +26,7 @@ LocalStack adalah sebuah alat pengembangan perangkat lunak open-source yang meny
             
             services:
               localstack:
-                image: localstack/localstack:0.14.5
+                image: localstack/localstack:2.0.0
                 container_name: localstack_s3
                 network_mode: bridge
                 environment:
@@ -53,27 +53,6 @@ Build.
 <pre>
     ❯ docker-compose up
 
-        [+] Running 1/1
-        ⠿ Container localstack_s3  Created                                                                                                                                                0.3s
-        Attaching to localstack_s3
-        localstack_s3  | Waiting for all LocalStack services to be ready
-        localstack_s3  | 2024-03-30 01:14:17,606 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
-        localstack_s3  | 2024-03-30 01:14:17,607 INFO supervisord started with pid 16
-        localstack_s3  | 2024-03-30 01:14:18,615 INFO spawned: 'infra' with pid 21
-        localstack_s3  | 
-        localstack_s3  | LocalStack version: 0.14.5
-        localstack_s3  | 2024-03-30 01:14:20,473 INFO success: infra entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
-        localstack_s3  | LocalStack Docker container id: cbf952a202b2
-        localstack_s3  | LocalStack build date: 2022-07-08
-        localstack_s3  | LocalStack build git hash: db54501d
-        localstack_s3  | 
-        localstack_s3  | Starting edge router (https port 4566)...
-        localstack_s3  | [2024-03-30 01:14:20 +0000] [21] [INFO] Running on https://0.0.0.0:4566 (CTRL + C to quit)
-        localstack_s3  | 2024-03-30T01:14:20.472:INFO:hypercorn.error: Running on https://0.0.0.0:4566 (CTRL + C to quit)
-        localstack_s3  | 2024-03-30T01:14:20.498:INFO:bootstrap.py: Execution of "start_runtime_components" took 942.75ms
-        localstack_s3  | Ready.
-        localstack_s3  | 2024-03-30T01:14:20.538:WARNING:localstack.services.infra: Persistence mechanism for community services (based on API calls record&replay) will be deprecated in versions 0.13.0 and above
-
 </pre>
 
 &nbsp;
@@ -81,21 +60,7 @@ Build.
 File structure of the mounting directory.
 <pre>
     ❯ tree -L 5 -a -I 'README.md|.DS_Store' ./localstack
-        ├── localstack_config
-        ├── localstack_data
-        │   ├── recorded_api_calls.json
-        │   └── startup_info.json
-        ├── localstack_libraries
-        └── localstack_root
-            ├── cache
-            │   ├── machine.json
-            │   ├── server.test.pem
-            │   ├── server.test.pem.crt
-            │   └── server.test.pem.key
-            ├── logs
-            └── var_libs
-
-        7 directories, 6 files
+ 
 </pre>
 
 &nbsp;
