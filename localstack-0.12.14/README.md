@@ -136,6 +136,27 @@ File structure of the mounting directory.
             2024-03-29 16:28:43 testbucket
     </pre>
 
+
+    if you need jq, you can install it in the following way:
+    <pre>
+        ❯ apk update && apk add --no-cache jq
+            fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+            fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+            v3.11.13-12-g2cfa91a2b4 [http://dl-cdn.alpinelinux.org/alpine/v3.11/main]
+            v3.11.11-124-gf2729ece5a [http://dl-cdn.alpinelinux.org/alpine/v3.11/community]
+            OK: 11307 distinct packages available
+            fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/main/x86_64/APKINDEX.tar.gz
+            fetch http://dl-cdn.alpinelinux.org/alpine/v3.11/community/x86_64/APKINDEX.tar.gz
+            (1/2) Installing oniguruma (6.9.4-r1)
+            (2/2) Installing jq (1.6-r0)
+            Executing busybox-1.31.1-r10.trigger
+            OK: 377 MiB in 94 packages        
+      
+       ❯ jq --version
+          jq-master-v20191114-85-g260888d269
+    </pre>
+        
+
 - &#x2705; Command used outside the container.
     <pre>
         ❯ exit
